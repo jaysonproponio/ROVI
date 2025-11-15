@@ -8,7 +8,7 @@ const initializeData = () => {
                 id: 1,
                 name: "Elegant Evening Dress",
                 price: 299.99,
-                image: "../photos/hero.jpg",
+                image: "../assets/images/ElegantEveningDress.jpg",
                 category: "Dresses",
                 description: "A stunning evening dress perfect for special occasions.",
                 inStock: true
@@ -17,7 +17,7 @@ const initializeData = () => {
                 id: 2,
                 name: "Classic Blazer",
                 price: 199.99,
-                image: "../photos/hero.jpg",
+                image: "../assets/images/ClassicBlazer.jpg",
                 category: "Jackets",
                 description: "Timeless blazer for professional and casual wear.",
                 inStock: true
@@ -26,7 +26,7 @@ const initializeData = () => {
                 id: 3,
                 name: "Designer Handbag",
                 price: 399.99,
-                image: "../photos/hero.jpg",
+                image: "../assets/images/DesignerHandbag.jpg",
                 category: "Accessories",
                 description: "Luxury handbag crafted from premium materials.",
                 inStock: true
@@ -35,7 +35,7 @@ const initializeData = () => {
                 id: 4,
                 name: "Silk Scarf",
                 price: 89.99,
-                image: "../photos/hero.jpg",
+                image: "../assets/images/SilkScarf.jpg",
                 category: "Accessories",
                 description: "Elegant silk scarf with unique patterns.",
                 inStock: true
@@ -44,7 +44,7 @@ const initializeData = () => {
                 id: 5,
                 name: "High-Waisted Trousers",
                 price: 149.99,
-                image: "../photos/hero.jpg",
+                image: "../assets/images/HighWaistedTrouser.jpg",
                 category: "Pants",
                 description: "Comfortable and stylish high-waisted trousers.",
                 inStock: true
@@ -53,7 +53,7 @@ const initializeData = () => {
                 id: 6,
                 name: "Cashmere Sweater",
                 price: 249.99,
-                image: "../photos/hero.jpg",
+                image: "../assets/images/CashmereSweater.jpg",
                 category: "Tops",
                 description: "Luxurious cashmere sweater for ultimate comfort.",
                 inStock: true
@@ -81,12 +81,46 @@ const initializeData = () => {
         localStorage.setItem('rovi_content', JSON.stringify(defaultContent));
     }
 
+    if (!localStorage.getItem('rovi_showcase')) {
+        const defaultShowcase = [
+            {
+                id: 1,
+                type: 'lookbook',
+                title: 'Spring Collection Lookbook',
+                image: '../assets/images/SpringCollectionLogbook.jpg',
+                description: 'Explore our latest spring fashion trends'
+            },
+            {
+                id: 2,
+                type: 'runway',
+                title: 'Fashion Week 2025',
+                image: '../assets/images/FashionWeek2025.jpg',
+                description: 'Highlights from our runway show'
+            },
+            {
+                id: 3,
+                type: 'behind-scenes',
+                title: 'Behind the Scenes',
+                image: '../assets/images/BehindTheScenes.jpg',
+                description: 'See how we create our collections'
+            },
+            {
+                id: 4,
+                type: 'lookbook',
+                title: 'Summer Essentials',
+                image: '../assets/images/SummerEssentials.jpg',
+                description: 'Must-have pieces for summer'
+            }
+        ];
+        localStorage.setItem('rovi_showcase', JSON.stringify(defaultShowcase));
+    }
+
     if (!localStorage.getItem('rovi_designers')) {
         const defaultDesigners = {
             1: {
                 name: "Kem Seracosa",
                 title: "Haute Couture Designer",
-                image: "../photos/hero.jpg",
+                image: "../assets/images/Seracosa.jpg",
                 bio: "Kem Seracosa is a renowned fashion designer with over 15 years of experience in haute couture. Her elegant evening wear and sophisticated designs have graced red carpets and fashion weeks around the world. Kem's signature style combines timeless elegance with modern sophistication, creating pieces that are both classic and contemporary.",
                 achievements: [
                     "Featured in Vogue, Elle, and Harper's Bazaar",
@@ -99,7 +133,7 @@ const initializeData = () => {
             2: {
                 name: "Armielyn Olarte",
                 title: "Streetwear & Contemporary Designer",
-                image: "../photos/hero.jpg",
+                image: "../assets/images/Olarte.jpg",
                 bio: "Armielyn Olarte is an innovative streetwear designer known for blending modern aesthetics with classic elements. Her bold designs challenge traditional fashion norms while maintaining wearability and style. Armielyn's work has been featured in major fashion weeks and has gained a cult following among fashion-forward individuals.",
                 achievements: [
                     "Featured in GQ, Complex, and Highsnobiety",
@@ -112,7 +146,7 @@ const initializeData = () => {
             3: {
                 name: "Nicole Mapinogos",
                 title: "Sustainable Fashion Designer",
-                image: "../photos/hero.jpg",
+                image: "../assets/images/Mapinogos.jpg",
                 bio: "Nicole Mapinogos is a sustainable fashion advocate specializing in eco-friendly materials and ethical production practices. Her collections prove that fashion can be both beautiful and responsible. Nicole's commitment to sustainability has earned her recognition in the fashion industry and beyond.",
                 achievements: [
                     "Winner of the Sustainable Fashion Award 2023",
@@ -125,7 +159,7 @@ const initializeData = () => {
             4: {
                 name: "Trexie Silvosa",
                 title: "Contemporary Fashion Designer",
-                image: "../photos/hero.jpg",
+                image: "../assets/images/Silvosa.jpg",
                 bio: "Trexie Silvosa is a contemporary fashion designer known for bold patterns and innovative silhouettes. Her work seamlessly blends artistic expression with wearable fashion, creating unique pieces that stand out. Trexie's designs have been featured in international fashion magazines and worn by celebrities on red carpets worldwide.",
                 achievements: [
                     "Featured in Vogue, W Magazine, and InStyle",
